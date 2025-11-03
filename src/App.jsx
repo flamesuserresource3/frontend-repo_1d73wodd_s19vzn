@@ -43,10 +43,10 @@ function App() {
       <header className="sticky top-0 z-50 w-full border-b border-white/10 bg-black/60 backdrop-blur">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3">
           {/* Logo: text-based professional mark using TikTok-inspired gradient */}
-          <a href="#" aria-label="Haris – TikTok Shop Growth Specialist" className="flex items-center gap-3">
+          <a href="#" aria-label="Haris Amjad – TikTok Shop Growth Specialist" className="flex items-center gap-3">
             <span className="text-xl font-extrabold tracking-tight leading-none">
               <span className="bg-gradient-to-r from-[#FF0050] via-white to-[#00F2EA] bg-clip-text text-transparent">
-                Haris
+                Haris Amjad
               </span>
             </span>
           </a>
