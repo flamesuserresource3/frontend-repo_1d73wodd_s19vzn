@@ -1,17 +1,17 @@
 import React from 'react';
 import Spline from '@splinetool/react-spline';
 import { motion } from 'framer-motion';
-import { Play, ShoppingBag, Sparkles, Share2, Camera } from 'lucide-react';
+import { Play, ShoppingBag, Sparkles } from 'lucide-react';
 
-const FloatingIcon = ({ Icon, delay = 0, className = '' }) => (
-  <motion.div
-    initial={{ y: 0, opacity: 0.9 }}
-    animate={{ y: [0, -12, 0] }}
-    transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut', delay }}
-    className={`p-2 rounded-xl/2 bg-white/5 backdrop-blur-sm border border-white/10 shadow-lg ${className}`}
+const FloatingBadge = ({ children }) => (
+  <motion.span
+    initial={{ y: 0, opacity: 0.95 }}
+    animate={{ y: [0, -8, 0] }}
+    transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
+    className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs tracking-wide text-white/80 backdrop-blur-sm"
   >
-    <Icon className="w-4 h-4 text-white/80" />
-  </motion.div>
+    <Sparkles className="h-3.5 w-3.5 text-[#00F2EA]" /> {children}
+  </motion.span>
 );
 
 export default function Hero() {
@@ -26,46 +26,45 @@ export default function Hero() {
       </div>
 
       {/* Subtle gradient overlay - non-blocking */}
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-black" />
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-black" />
 
       {/* Content */}
       <div className="relative z-10 mx-auto flex max-w-6xl flex-col items-center justify-center px-6 py-28 text-center">
-        <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs tracking-wide text-white/80">
-          <Sparkles className="h-3.5 w-3.5 text-[#00F2EA]" /> TikTok Shop Growth Specialist
-        </span>
+        <FloatingBadge>TikTok Shop Growth Specialist</FloatingBadge>
 
-        <h1 className="mt-6 bg-gradient-to-r from-[#FF0050] via-white to-[#00F2EA] bg-clip-text text-5xl font-extrabold tracking-tight text-transparent sm:text-6xl md:text-7xl">
-          Haris Amjad
+        <h1 className="mt-6 text-5xl font-extrabold tracking-tight sm:text-6xl md:text-7xl">
+          <span className="bg-gradient-to-r from-[#FF0050] via-white to-[#00F2EA] bg-clip-text text-transparent">I’m Haris.</span>
         </h1>
 
-        <p className="mt-4 max-w-2xl text-base text-white/70 sm:text-lg">
-          I help ambitious brands turn attention into revenue on TikTok Shop with data-driven strategies,
-          creator partnerships, and high-velocity catalog optimization.
+        <p className="mt-5 max-w-3xl text-balance text-white/80 sm:text-lg">
+          The guy brands call when their TikTok Shop stops selling — or never started.
+        </p>
+
+        <div className="mt-5 space-y-1 text-white/70">
+          <p>Not a “TikTok manager.”</p>
+          <p>Not a “VA.”</p>
+          <p>Not another freelancer who posts random videos.</p>
+        </div>
+
+        <p className="mt-6 max-w-3xl text-pretty text-white/90 sm:text-lg">
+          I fix broken TikTok Shops — and make them profitable.
+          <br className="hidden sm:block" />
+          Fast, aggressively, and with systems that don’t fail.
         </p>
 
         <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
           <a
             href="#contact"
-            className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#FF0050] to-[#00F2EA] px-5 py-3 text-sm font-semibold text-black shadow-lg shadow-[#FF0050]/20">
-            <Play className="h-4 w-4" /> Book a Call
+            className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#FF0050] to-[#00F2EA] px-5 py-3 text-sm font-semibold text-black shadow-lg shadow-[#FF0050]/20"
+          >
+            <Play className="h-4 w-4" /> DM Me Now
           </a>
           <a
-            href="#results"
-            className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-5 py-3 text-sm font-semibold text-white hover:bg-white/10">
-            <ShoppingBag className="h-4 w-4" /> See Results
+            href="#offer"
+            className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-5 py-3 text-sm font-semibold text-white hover:bg-white/10"
+          >
+            <ShoppingBag className="h-4 w-4" /> Why You’re Not Selling
           </a>
-        </div>
-      </div>
-
-      {/* Floating Icons Overlay - non-blocking */}
-      <div className="pointer-events-none absolute inset-0">
-        <div className="absolute left-6 top-24 hidden flex-col gap-3 sm:flex">
-          <FloatingIcon Icon={Sparkles} delay={0.2} />
-          <FloatingIcon Icon={Share2} delay={0.6} />
-        </div>
-        <div className="absolute right-6 top-40 hidden flex-col gap-3 md:flex">
-          <FloatingIcon Icon={Camera} delay={0.4} />
-          <FloatingIcon Icon={ShoppingBag} delay={0.9} />
         </div>
       </div>
     </section>
