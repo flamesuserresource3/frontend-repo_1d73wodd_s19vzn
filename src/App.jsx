@@ -42,11 +42,15 @@ function App() {
       {/* Top nav (minimal) */}
       <header className="sticky top-0 z-50 w-full border-b border-white/10 bg-black/60 backdrop-blur">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3">
-          <div className="flex items-center gap-2">
-            <span className="inline-block h-3 w-3 rounded-full bg-[#FF0050]" />
-            <span className="inline-block h-3 w-3 rounded-full bg-white" />
-            <span className="inline-block h-3 w-3 rounded-full bg-[#00F2EA]" />
-          </div>
+          {/* Logo: text-based professional mark using TikTok-inspired gradient */}
+          <a href="#" aria-label="Haris – TikTok Shop Growth Specialist" className="flex items-center gap-3">
+            <span className="text-xl font-extrabold tracking-tight leading-none">
+              <span className="bg-gradient-to-r from-[#FF0050] via-white to-[#00F2EA] bg-clip-text text-transparent">
+                Haris
+              </span>
+            </span>
+          </a>
+
           <nav className="hidden gap-6 text-sm text-white/80 sm:flex">
             <a href="#offer" className="hover:text-white">The Fix</a>
             <a href="#results" className="hover:text-white">Results</a>
