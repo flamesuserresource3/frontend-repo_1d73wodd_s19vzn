@@ -3,7 +3,17 @@
 > vite
 
 
-  VITE v5.4.20  ready in 329 ms
+  VITE v5.4.20  ready in 260 ms
 
   ➜  Local:   http://localhost:3000/
   ➜  Network: http://172.20.5.144:3000/
+3:37:31 PM [vite] warning: The character ">" is not valid inside a JSX element
+24 |                <h3 className="text-lg font-semibold">Creator Velocity</h3>
+25 |              </div>
+26 |              <p className="mt-3 text-white/70">Activated 100+ creators with >4% CTR and repeat commission wins.</p>
+   |                                                                             ^
+27 |            </div>
+28 |  
+
+  Plugin: vite:esbuild
+  File: /home/workspace/src/components/Results.jsx

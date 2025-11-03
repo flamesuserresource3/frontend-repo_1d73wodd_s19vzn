@@ -1,70 +1,55 @@
-import { CheckCircle2 } from 'lucide-react';
-import { motion } from 'framer-motion';
-
-const issues = [
-  'Bad setup → wrong categories, weak SEO, zero trust',
-  'Weak creatives → no hook, no retention, no sales',
-  'No affiliates → no creator push, no organic conversions',
-  'Random boosting → burning money with zero data',
-  'Backend chaos → late responses, penalties, messy operations',
-];
-
-const fixes = [
-  'High-converting shop setup (SEO, listings, trust indicators)',
-  'Scroll-stopping UGC + ad creatives',
-  'Affiliate/creator recruitment & management system',
-  'Performance tracking + data-based scaling',
-  'Operational cleanup to remove penalties + increase trust',
-];
+import React from 'react';
+import { AlertTriangle, LineChart, Users, Sparkles } from 'lucide-react';
 
 export default function Offer() {
   return (
     <section id="offer" className="relative w-full bg-black py-20 text-white">
-      <div className="mx-auto max-w-7xl px-6">
-        <div className="grid items-start gap-12 md:grid-cols-2">
-          <motion.div
-            initial={{ opacity: 0, y: 24 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.6 }}
-          >
-            <h2 className="text-3xl font-bold sm:text-4xl">WHY YOUR SHOP ISN’T MAKING MONEY</h2>
-            <p className="mt-3 text-white/80">Let’s not sugarcoat it. Your TikTok Shop isn’t struggling because of the algorithm — it’s struggling because your execution is weak.</p>
-            <p className="mt-4 font-medium text-white/90">Here’s the real problem:</p>
-            <ul className="mt-6 space-y-3">
-              {issues.map((item) => (
-                <li key={item} className="flex items-start gap-3 rounded-lg border border-white/10 bg-white/5 p-4">
-                  <span className="mt-0.5 text-[#FF0050]">❌</span>
-                  <span className="text-white/90">{item}</span>
-                </li>
-              ))}
-            </ul>
-            <p className="mt-6 text-white/90">You don’t have a product problem. You have a system problem.</p>
-          </motion.div>
+      <div className="mx-auto max-w-6xl px-6">
+        <h2 className="bg-gradient-to-r from-[#FF0050] to-[#00F2EA] bg-clip-text text-3xl font-bold text-transparent sm:text-4xl">
+          Why Your TikTok Shop Isn’t Printing Money (Yet)
+        </h2>
 
-          <motion.div
-            initial={{ opacity: 0, y: 24 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-          >
-            <h3 className="text-3xl font-bold sm:text-4xl">WHAT I DO (THE FIX)</h3>
-            <p className="mt-3 text-white/80">I rebuild your TikTok Shop from the inside out. Every touchpoint. Every bottleneck. Every conversion killer.</p>
-            <ul className="mt-6 space-y-3">
-              {fixes.map((item) => (
-                <li key={item} className="flex items-start gap-3 rounded-lg border border-white/10 bg-white/5 p-4">
-                  <CheckCircle2 className="mt-0.5 h-5 w-5 flex-none text-[#00F2EA]" />
-                  <span className="text-white/90">{item}</span>
-                </li>
-              ))}
+        <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2">
+          <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-6">
+            <div className="mb-4 flex items-center gap-3">
+              <AlertTriangle className="h-5 w-5 text-[#FF0050]" />
+              <h3 className="text-lg font-semibold">What’s Holding You Back</h3>
+            </div>
+            <ul className="space-y-3 text-white/70">
+              <li>• Disconnected catalog with weak discovery signals</li>
+              <li>• Creators not converting into real revenue</li>
+              <li>• Improper attribution and offer structure</li>
+              <li>• Slow creative testing and iteration cycles</li>
             </ul>
-            <p className="mt-6 text-white/90">I don’t guess. I engineer sales.</p>
+          </div>
 
-            <blockquote className="mt-8 rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-transparent p-6 text-white/90">
-              <p className="text-lg">“Our shop was dead for weeks. Haris rebuilt everything — listings, creators, ads — and within 7 days we hit consistent daily orders. Zero bullshit.”</p>
-              <footer className="mt-3 text-sm text-white/60">— UK Brand Owner</footer>
-            </blockquote>
-          </motion.div>
+          <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-6">
+            <div className="mb-4 flex items-center gap-3">
+              <Sparkles className="h-5 w-5 text-[#00F2EA]" />
+              <h3 className="text-lg font-semibold">What I Do About It</h3>
+            </div>
+            <ul className="space-y-3 text-white/70">
+              <li>• Rebuild your catalog architecture for discovery</li>
+              <li>• Recruit and manage high-converting creators</li>
+              <li>• Craft irresistible offers and viral hooks</li>
+              <li>• Scale winners fast with rapid feedback loops</li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-3">
+          <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-6">
+            <LineChart className="h-5 w-5 text-[#00F2EA]" />
+            <p className="mt-3 text-sm text-white/70">Data-led playbooks tailored to your vertical and AOV.</p>
+          </div>
+          <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-6">
+            <Users className="h-5 w-5 text-[#FF0050]" />
+            <p className="mt-3 text-sm text-white/70">Creator network with proven performance history.</p>
+          </div>
+          <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-6">
+            <Sparkles className="h-5 w-5 text-[#00F2EA]" />
+            <p className="mt-3 text-sm text-white/70">Conversion-first creatives that sell while they entertain.</p>
+          </div>
         </div>
       </div>
     </section>

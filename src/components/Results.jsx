@@ -1,62 +1,55 @@
-import { Rocket, TrendingUp, Star } from 'lucide-react';
-import { motion } from 'framer-motion';
-
-const bullets = [
-  {
-    icon: Rocket,
-    title: 'Turned 0-order shops into daily sellers',
-    desc: 'Engineered end-to-end fixes to unblock conversions and kickstart daily sales.',
-  },
-  {
-    icon: Star,
-    title: 'Fixed broken listings that killed conversions',
-    desc: 'Rebuilt SEO, creative, and trust stack to raise CVR across categories.',
-  },
-  {
-    icon: TrendingUp,
-    title: 'Scaled shops others couldn’t handle',
-    desc: 'Systems for affiliates, ads, ops, and data — built to scale reliably.',
-  },
-];
+import React from 'react';
+import { Trophy, Star, Rocket, BarChart3, ThumbsUp } from 'lucide-react';
 
 export default function Results() {
   return (
-    <section className="relative w-full bg-black py-20 text-white">
-      <div className="mx-auto max-w-7xl px-6">
-        <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.6 }}
-          className="grid gap-10 md:grid-cols-2"
-        >
-          <div>
-            <h2 className="text-3xl font-bold sm:text-4xl">WHAT I’VE DONE</h2>
-            <p className="mt-3 max-w-2xl text-white/80">
-              I’ve managed multiple TikTok Shops across different niches: Private label, general stores, local suppliers, UK-based operations. I don’t talk theory. I execute results.
-            </p>
+    <section id="results" className="relative w-full bg-black py-20 text-white">
+      <div className="mx-auto max-w-6xl px-6">
+        <h2 className="bg-gradient-to-r from-[#FF0050] to-[#00F2EA] bg-clip-text text-3xl font-bold text-transparent sm:text-4xl">
+          Proven Results
+        </h2>
 
-            <div className="mt-8 grid gap-6 sm:grid-cols-2">
-              {bullets.map(({ icon: Icon, title, desc }) => (
-                <div key={title} className="rounded-xl border border-white/10 bg-white/5 p-5">
-                  <Icon className="h-6 w-6 text-[#00F2EA]" />
-                  <h3 className="mt-3 font-semibold">{title}</h3>
-                  <p className="mt-2 text-sm text-white/70">{desc}</p>
-                </div>
-              ))}
+        <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-3">
+          <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-6">
+            <div className="flex items-center gap-3">
+              <Trophy className="h-5 w-5 text-[#FF0050]" />
+              <h3 className="text-lg font-semibold">Shop Revenue</h3>
             </div>
+            <p className="mt-3 text-white/70">Scaled multiple shops from 0 to consistent five figures/month in 60 days.</p>
           </div>
 
-          <div className="rounded-2xl border border-white/10 bg-gradient-to-br from-[#FF0050]/10 via-transparent to-[#00F2EA]/10 p-6">
-            <h3 className="text-3xl font-bold">WHY ME</h3>
-            <ul className="mt-5 space-y-3 text-white/90">
-              <li>Because you’ve already tried “TikTok experts.” You’ve already wasted money on fancy videos and random ads.</li>
-              <li>Now you need someone who actually knows what makes a TikTok Shop sell — daily.</li>
-              <li>I don’t manage. I dominate. I don’t test. I scale. I don’t hope. I build systems.</li>
-            </ul>
-            <p className="mt-6 text-lg text-white/95">⚡ “I fix what others mess up — and make it profitable.”</p>
+          <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-6">
+            <div className="flex items-center gap-3">
+              <Rocket className="h-5 w-5 text-[#00F2EA]" />
+              <h3 className="text-lg font-semibold">Creator Velocity</h3>
+            </div>
+            <p className="mt-3 text-white/70">Activated 100+ creators with >4% CTR and repeat commission wins.</p>
           </div>
-        </motion.div>
+
+          <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-6">
+            <div className="flex items-center gap-3">
+              <BarChart3 className="h-5 w-5 text-[#FF0050]" />
+              <h3 className="text-lg font-semibold">Offer Conversion</h3>
+            </div>
+            <p className="mt-3 text-white/70">Doubled PDP CVR with messaging + bundle optimization.</p>
+          </div>
+        </div>
+
+        <div className="mt-10 rounded-2xl border border-white/10 bg-white/[0.03] p-6">
+          <div className="flex items-center gap-3">
+            <Star className="h-5 w-5 text-[#00F2EA]" />
+            <h3 className="text-lg font-semibold">Why Work With Me</h3>
+          </div>
+          <ul className="mt-3 grid grid-cols-1 gap-3 text-white/70 md:grid-cols-2">
+            <li>• Clear dashboards, simple KPIs, ruthless prioritization</li>
+            <li>• Fast creative cycles: brief, test, iterate, scale</li>
+            <li>• Partners-first approach for long-term wins</li>
+            <li>• I own the outcomes and communicate daily</li>
+          </ul>
+          <div className="mt-4 flex items-center gap-2 text-sm text-white/60">
+            <ThumbsUp className="h-4 w-4" /> References available upon request
+          </div>
+        </div>
       </div>
     </section>
   );
