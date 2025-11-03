@@ -6,14 +6,14 @@ import Contact from './components/Contact';
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-screen bg-black text-white antialiased">
       {/* Header */}
-      <header className="sticky top-0 z-50 w-full border-b border-white/10 bg-black/70 backdrop-blur-xl">
+      <header className="sticky top-0 z-50 w-full border-b border-white/10 bg-black/75 backdrop-blur-xl">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-          <a href="#home" className="bg-gradient-to-r from-[#FF0050] via-white to-[#00F2EA] bg-clip-text text-lg font-extrabold tracking-tight text-transparent">
+          <a href="#home" className="bg-gradient-to-r from-[#FF0050] via-white to-[#00F2EA] bg-clip-text text-xl font-extrabold tracking-tight text-transparent">
             Haris Amjad
           </a>
-          <nav className="hidden items-center gap-6 text-sm text-white/70 sm:flex">
+          <nav className="hidden items-center gap-6 text-base text-white/85 sm:flex">
             <a href="#offer" className="hover:text-white">Offer</a>
             <a href="#results" className="hover:text-white">Results</a>
             <a href="#contact" className="hover:text-white">Contact</a>
@@ -30,7 +30,7 @@ export default function App() {
       </main>
 
       {/* Footer */}
-      <footer className="border-t border-white/10 bg-black py-8 text-center text-sm text-white/60">
+      <footer className="border-t border-white/10 bg-black py-10 text-center text-base text-white/70">
         <div className="mx-auto max-w-6xl px-6">
           <p>
             © {new Date().getFullYear()} Haris Amjad — Built with a TikTok-inspired gradient aesthetic.
